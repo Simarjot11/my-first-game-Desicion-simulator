@@ -1,0 +1,97 @@
+print("WELCOME TO A GAME FULL OF ADVENTURES")
+print("INSTRUCTIONS:")
+print("1.It is a decision based games that how you make your decisions")
+print("2. You have to simply selct an option and see what happens next.ALL THE BEST!")
+name=input("ENTER YOUR GAMING NAME")
+age=int (input("ENTER YOUR AGE"))
+health=10;
+print("Your health is:",health)
+if age<18:
+    print("YOU ARE NOT OLD ENOUGH TO PLAY....!")
+else:
+    print("YOU ARE OLD ENOUGH TO PLAY :)")
+    print("LETS GET STARTED")
+    l_or_r=input("1. Left or Right (left/right)? ")
+    if(l_or_r=="left"):
+        print("You headed towards river")
+        ans=input("Want to swim through river or take another path from forest (forest/swim)? ")
+        if(ans=="swim"):
+            health-=2
+            print("Sorry river contains crocs so bitten by them helth decreases:(....health:",health)
+            ans=input("You are tired and hungry you can hunt fishes in river want to hunt or continue (hunt/continue) ?")
+            if(ans=="hunt"):
+                health+=1
+                print("Hunt successfull healt increases health:",health)
+                ans=input("You are very tired wnt to take some rest or want to move on (rest/move) ?")
+                if ans=="rest":
+                    health-=1
+                    print("Your body get cold due to rest so helth decreses health:",health)
+                    ans=input("Saw an officer :) Wna go to him (yes/no) ?")
+                    if(ans=="yes"):
+                        print("Finally saved")
+                    else:
+                        print("gave away your last chance to survive")
+                        print("****END****")
+                    
+                else:
+                    health-=9
+                    print("You got too exhausted that you fainted and dehydrated health: ",health)
+                    print("When yo wake up You are in a car Congrats You are saved by the forest department:)")
+                    print("****End****"
+                    )
+                    
+
+            else:
+                health-=5
+                print("Shit u choosed wrong decision now your life is reduced to half health:",health)
+                ans=input("Two ways which you wna take left or right (left/right) ?")
+                if ans=="right":
+                    health=0
+                    print("Stuck inside DalDal dead:(...health",health)
+
+                else:
+                    print("Reaches finally to a town")
+                    print("Able to survive :) WON health:",health)
+
+
+
+        else:
+            ans=input("Two ways which you wna take left or right (left/right) ?")
+            if ans=="right":
+                health=0
+                print("Stuck inside DalDal dead:(...health",health)
+
+            else:
+                print("Reaches finally to a town")
+                print("Able to survive :) WON health:",health)
+
+
+
+    else:
+        print("You headed towards cliffs")
+        ans=input("Want to go back another way or other option climb the cliff (back/climb)?")
+        if(ans=="climb"):
+            print("Taken best decision as you found a small village on the other side of the cliff you are saved :)")
+            print("Wait your toe slipped off the cliff oh no! ur helth decreased to half")
+            health-=5
+            print("health:",health)
+            ans=input("You slipped down the cliff to the river You can swim but have very less energy so swim or just give up")
+            if ans=="swim":
+                print("courageous but can't fight with fortune u died because u hit a rock ")
+                print("****END****")
+            else:
+                print("Coward move but lucky enough able to hold a branch of tree and able to come out")
+                ans=input("again stuck between two roads which one you choose (left/right)")
+                if(ans=="right"):
+                    print("again went back to forest and because of lesss stamina and helath u died")
+                    print("END")
+                else:
+                    print("Finally a decision favours You reached village and saved ")
+                    print("finally WON")
+                    print("Congrats :)-")
+
+        else:
+            print("Wrong decision there's never turning back in game U ARE DEAD")
+            health=0
+            print("***LOST***",health)
+
